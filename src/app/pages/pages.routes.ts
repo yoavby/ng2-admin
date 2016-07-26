@@ -30,11 +30,11 @@ export const PagesRoutes:RouterConfig = [
     component: Pages,
     children: [
       {
-        path: 'dashboard new',
+        path: 'dashboard',
         component: Dashboard,
         data: {
           menu: {
-            title: 'Dashboard',
+            title: 'Features',
             icon: 'ion-android-home',
             selected: false,
             expanded: false,
