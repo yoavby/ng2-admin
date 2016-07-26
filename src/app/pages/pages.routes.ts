@@ -30,7 +30,7 @@ export const PagesRoutes:RouterConfig = [
     component: Pages,
     children: [
       {
-        path: 'dashboard',
+        path: 'dashboard new',
         component: Dashboard,
         data: {
           menu: {
