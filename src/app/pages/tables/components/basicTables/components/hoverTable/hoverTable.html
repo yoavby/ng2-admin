@@ -13,16 +13,24 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let item of metricsTableData" class="no-top-border">
+            <template ngFor let-item [ngForOf]="metricsTableData" [ngForTrackBy]="itemTrackBy">
+
+    <tr class="no-top-border" (click) = "setSelectItem(item)">
       <td><img src="{{ ( item.image | baAppPicture ) }}" width="20" height="20"></td>
       <td ngClass="nowrap">{{item.browser}}</td>
       <td class="align-right">{{item.visits}}</td>
       <td class="table-arr"><i [ngClass]="{'icon-up': item.isVisitsUp, 'icon-down': !item.isVisitsUp }"></i></td>
-      <td class="align-right">{{item.purchases}}</td>
+      <td class="align-right">P{{item.purchases}}</td>
       <td class="table-arr"><i [ngClass]="{'icon-up': item.isPurchasesUp, 'icon-down': !item.isPurchasesUp }"></i></td>
       <td class="align-right">{{item.percent}}</td>
       <td class="table-arr"><i [ngClass]="{'icon-up': item.isPercentUp, 'icon-down': !item.isPercentUp }"></i></td>
     </tr>
+    <tr *ngIf="selectedItem === item && selectedItem != null" class="no-top-border" >
+      <td>
+          Selected Item {{item.browser}}
+      </td>
+    </tr>
+            </template>
     </tbody>
   </table>
 </div>
