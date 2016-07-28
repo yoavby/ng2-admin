@@ -26,7 +26,7 @@
       <td class="table-arr"><i [ngClass]="{'icon-up': item.isPercentUp, 'icon-down': !item.isPercentUp }"></i></td>
     </tr>
     <tr *ngIf="selectedItem === item && selectedItem != null" class="no-top-border" >
-      <td>
+      <td colspan="8">
           Selected Item {{item.browser}}
       </td>
     </tr>
