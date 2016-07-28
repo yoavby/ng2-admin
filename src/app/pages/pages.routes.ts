@@ -12,6 +12,7 @@ import {Forms} from './forms/forms.component';
 import {Inputs} from './forms/components/inputs/inputs.component';
 import {Layouts} from './forms/components/layouts/layouts.component';
 import {BasicTables} from './tables/components/basicTables/basicTables.component';
+import {FeaturesTable} from './features/components/featureTable/featureTable.component';
 import {Tables} from './tables/tables.component';
 import {Maps} from './maps/maps.component';
 import {GoogleMaps} from './maps/components/googleMaps/googleMaps.component';
@@ -29,6 +30,16 @@ export const PagesRoutes:RouterConfig = [
     path: 'pages',
     component: Pages,
     children: [
+    {
+            path: 'featuretables',
+            component: FeaturesTable,
+            data: {
+              menu: {
+                title: 'Features Tables',
+                icon: 'ion-grid'
+              }
+            }
+          },
       {
         path: 'dashboard',
         component: Dashboard,
