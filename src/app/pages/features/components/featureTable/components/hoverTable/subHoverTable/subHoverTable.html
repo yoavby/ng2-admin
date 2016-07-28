@@ -2,8 +2,21 @@
   <table>
     <tbody>
             <template ngFor let-item [ngForOf]="metricsTableData" [ngForTrackBy]="itemTrackBy">
+    <style style="text/css">
+  	.no-select{
+	  }
+	  	.do-select{
+	  }
+	/* Define the hover highlight color for the table row */
+     tr.no-select:hover {
+          background-color: rgba(0, 0, 0, 0);
+    }
+         tr.do-select:hover {
+          background-color: rgba(0, 0, 0, 0.1);
+    }
 
-    <tr class="no-top-border" (click) = "setSelectItem(item)">
+</style>
+    <tr class="no-top-border" (click) = "setSelectItem(item)" class="do-select">
       <td><img src="{{ ( item.image | baAppPicture ) }}" width="20" height="20"></td>
       <td ngClass="nowrap">{{item.browser}}</td>
       <td class="align-right">{{item.visits}}</td>
@@ -13,15 +26,7 @@
       <td class="align-right">{{item.percent}}</td>
       <td class="table-arr"><i [ngClass]="{'icon-up': item.isPercentUp, 'icon-down': !item.isPercentUp }"></i></td>
     </tr>
-    <style style="text/css">
-  	.no-select{
-	  }
-	
-	/* Define the hover highlight color for the table row */
-     tr.no-select:hover {
-          background-color: rgba(0, 0, 0, 0);
-    }
-</style>
+
     <tr *ngIf="selectedItem === item && selectedItem != null" class="no-select">
       <td colspan="8">
           <sub-hover-table [metricsTableData]="item.children"></sub-hover-table>
