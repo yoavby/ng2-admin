@@ -1,17 +1,5 @@
 <div class="horizontal-scroll">
-  <table class="table table-hover">
-    <thead>
-    <tr class="black-muted-bg">
-      <th class="browser-icons"></th>
-      <th>Browser</th>
-      <th class="align-right">Visits</th>
-      <th class="table-arr"></th>
-      <th class="align-right">Purchases</th>
-      <th class="table-arr"></th>
-      <th class="align-right">%</th>
-      <th class="table-arr"></th>
-    </tr>
-    </thead>
+  <table>
     <tbody>
             <template ngFor let-item [ngForOf]="metricsTableData" [ngForTrackBy]="itemTrackBy">
 
@@ -34,9 +22,7 @@
           background-color: rgba(0, 0, 0, 0);
     }
 </style>
-
-
-    <tr *ngIf="selectedItem === item && selectedItem != null" class="no-select" >
+    <tr *ngIf="selectedItem === item && selectedItem != null" class="no-select">
       <td colspan="8">
           <sub-hover-table [metricsTableData]="item.children"></sub-hover-table>
       </td>

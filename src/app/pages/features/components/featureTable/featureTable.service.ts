@@ -547,7 +547,51 @@ export class FeatureTableService {
       purchases: '4,214',
       isPurchasesUp: true,
       percent: '45%',
+      isPercentUp: true,
+      children : [
+{
+      image: 'app/browsers/firefox.svg',
+      browser: 'Bahams Cat lover',
+      visits: '7,873',
+      isVisitsUp: true,
+      purchases: '3,031',
+      isPurchasesUp: false,
+      percent: '28%',
       isPercentUp: true
+    },
+    {
+      image: 'app/browsers/ie.svg',
+      browser: 'Bahsmas Travel',
+      visits: '5,890',
+      isVisitsUp: false,
+      purchases: '2,102',
+      isPurchasesUp: false,
+      percent: '17%',
+      isPercentUp: false,
+      children : [
+{
+      image: 'app/browsers/firefox.svg',
+      browser: 'Bahams Travel Cat lover',
+      visits: '7,873',
+      isVisitsUp: true,
+      purchases: '3,031',
+      isPurchasesUp: false,
+      percent: '28%',
+      isPercentUp: true
+    },
+    {
+      image: 'app/browsers/ie.svg',
+      browser: 'Bahsmas Travel Travel lovers',
+      visits: '5,890',
+      isVisitsUp: false,
+      purchases: '2,102',
+      isPurchasesUp: false,
+      percent: '17%',
+      isPercentUp: false
+    }
+      ]
+    }
+      ]
     },
     {
       image: 'app/browsers/firefox.svg',
