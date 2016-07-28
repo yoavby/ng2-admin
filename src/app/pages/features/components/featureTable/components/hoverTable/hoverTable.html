@@ -15,7 +15,7 @@
     <tbody>
             <template ngFor let-item [ngForOf]="metricsTableData" [ngForTrackBy]="itemTrackBy">
 
-    <tr class="no-top-border" (click) = "setSelectItem(item)">
+    <tr class="no-top-border" (click) = "setSelectItem(item)" *ngIf = "item.mxg !== true">
       <td><img src="{{ ( item.image | baAppPicture ) }}" width="20" height="20"></td>
       <td ngClass="nowrap">{{item.browser}}</td>
       <td class="align-right">{{item.visits}}</td>
@@ -35,7 +35,11 @@
     }
 </style>
 
-
+    <tr *ngIf="item.mxg === true" class="no-select" >
+      <td colspan="8"  style="border-style: dashed;">
+          <sub-hover-table [metricsTableData]="item.children"></sub-hover-table>
+      </td>
+    </tr>
     <tr *ngIf="selectedItem === item && selectedItem != null" class="no-select" >
       <td colspan="8">
           <sub-hover-table [metricsTableData]="item.children"></sub-hover-table>
