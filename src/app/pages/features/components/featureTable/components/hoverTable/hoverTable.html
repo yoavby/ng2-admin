@@ -21,13 +21,10 @@
     <thead>
     <tr class="black-muted-bg">
       <th class="browser-icons"></th>
-      <th>Browser</th>
-      <th class="align-right">Visits</th>
-      <th class="table-arr"></th>
-      <th class="align-right">Purchases</th>
-      <th class="table-arr"></th>
-      <th class="align-right">%</th>
-      <th class="table-arr"></th>
+      <th> Name</th>
+      <th class="align-right">Description</th>
+      <th class="align-right">Stage</th>
+      <th class="align-right">Enabled/Disabled</th>
     </tr>
     </thead>
     <tbody>
@@ -35,24 +32,20 @@
 
     <tr class="no-top-border" (click) = "setSelectItem(item)" *ngIf = "item.mxg !== true">
        <td><div [class.rotateItem]="getRotation(item)">></div></td>
-      <td><img src="{{ ( item.image | baAppPicture ) }}" width="20" height="20"></td>
-      <td ngClass="nowrap">{{item.browser}}</td>
-      <td class="align-right">{{item.visits}}</td>
-      <td class="table-arr"><i [ngClass]="{'icon-up': item.isVisitsUp, 'icon-down': !item.isVisitsUp }"></i></td>
-      <td class="align-right">P{{item.purchases}}</td>
-      <td class="table-arr"><i [ngClass]="{'icon-up': item.isPurchasesUp, 'icon-down': !item.isPurchasesUp }"></i></td>
-      <td class="align-right">{{item.percent}}</td>
-      <td class="table-arr"><i [ngClass]="{'icon-up': item.isPercentUp, 'icon-down': !item.isPercentUp }"></i></td>
+      <td ngClass="nowrap">{{item.name}}</td>
+      <td class="align-right">{{item.description}}</td>
+      <td class="align-right">{{item.stage}}</td>
+      <td class="align-right">{{item.enabled}}</td>
     </tr>
 
 
     <tr *ngIf="item.mxg === true" class="mxg-select" >
-      <td colspan="9" >
+      <td colspan="5" >
           <sub-hover-table [metricsTableData]="item.children"></sub-hover-table>
       </td>
     </tr>
-    <tr *ngIf="selectedItem === item && selectedItem != null" class="no-select" >
-      <td colspan="9">
+    <tr *ngIf="getRotation(item)" class="no-select" >
+      <td colspan="5">
           <sub-hover-table [metricsTableData]="item.children"></sub-hover-table>
       </td>
     </tr>

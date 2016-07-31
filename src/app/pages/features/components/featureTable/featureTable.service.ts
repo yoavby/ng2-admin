@@ -537,8 +537,61 @@ export class FeatureTableService {
       status: 'warning'
     }
   ];
-
-  metricsTableData = [
+metricsTableData =[
+  {
+    "id": "4c90d247-6b0f-4250-9503-865677bb8e62",
+    "creationDate": 1469599032402,
+    "enabled": true,
+    "lastModified": 1469599032402,
+    "description": "my feature desc 2",
+    "name": "Bahams",
+    "owner": "John",
+    "parent": null,
+    "additionalInfo": {
+      "aaa": "bbb"
+    },
+    "creator": "Philip",
+        "stage": "dev",
+    "children" : [
+      {
+    "id": "4c90d247-6b0f-4250-9503-865677bb8e62",
+    "creationDate": 1469599032402,
+    "enabled": true,
+    "lastModified": 1469599032402,
+    "description": "my feature desc 2",
+    "name": "Bahams Lover",
+    "owner": "John",
+    "parent": null,
+    "additionalInfo": {
+      "aaa": "bbb"
+    },
+    "stage": "dev",
+    "creator": "Philip",
+    "children" : [
+      
+    ]
+  },{
+    "id": "4c90d247-6b0f-4250-9503-865677bb8e62",
+    "creationDate": 1469599032402,
+    "enabled": false,
+    "lastModified": 1469599032402,
+    "description": "my feature desc 2",
+    "name": "Bahams Hater",
+    "owner": "John",
+    "parent": null,
+        "stage": "dev",
+    "additionalInfo": {
+      "aaa": "bbb"
+    },
+    "creator": "Philip",
+    "children" : [
+      
+    ]
+  }
+    ]
+  }
+];
+  metricsTableDataOLD = [
     {
       image: 'app/browsers/chrome.svg',
       browser: 'Bahams',

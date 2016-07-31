@@ -18,8 +18,7 @@ export class HoverTable {
     this.metricsTableData = _basicTablesService.metricsTableData;
   }
 getRotation(item:any) {
-  
-  if (this.selectedItem === item){
+  if (this.selectedItem === item && this.isOpen == true){
     console.log("rotate true");
       return true;//"rotate(90deg)"
     }else{

@@ -21,20 +21,16 @@
   -o-transform:rotate(90deg); /* Opera */
     }
 </style>
-    <tr class="no-top-border" (click) = "setSelectItem(item)" class="do-select">
-      <td><div [class.rotateItem]="getRotation(item)">></div></td>
-      <td><img src="{{ ( item.image | baAppPicture ) }}" width="20" height="20"></td>
-      <td ngClass="nowrap">{{item.browser}}</td>
-      <td class="align-right">{{item.visits}}</td>
-      <td class="table-arr"><i [ngClass]="{'icon-up': item.isVisitsUp, 'icon-down': !item.isVisitsUp }"></i></td>
-      <td class="align-right">P{{item.purchases}}</td>
-      <td class="table-arr"><i [ngClass]="{'icon-up': item.isPurchasesUp, 'icon-down': !item.isPurchasesUp }"></i></td>
-      <td class="align-right">{{item.percent}}</td>
-      <td class="table-arr"><i [ngClass]="{'icon-up': item.isPercentUp, 'icon-down': !item.isPercentUp }"></i></td>
+ 
+     <tr class="no-top-border" (click) = "setSelectItem(item)" class="do-select">     
+        <td><div [class.rotateItem]="getRotation(item)">></div></td>
+      <td ngClass="nowrap">{{item.name}}</td>
+      <td class="align-right">{{item.description}}</td>
+      <td class="align-right">{{item.stage}}</td>
+      <td class="align-right">{{item.enabled}}</td>
     </tr>
-
-    <tr *ngIf="selectedItem === item && selectedItem != null" class="no-select">
-      <td colspan="9">
+    <tr *ngIf="getRotation(item)" class="no-select">
+      <td colspan="5">
           <sub-hover-table [metricsTableData]="item.children"></sub-hover-table>
       </td>
     </tr>
