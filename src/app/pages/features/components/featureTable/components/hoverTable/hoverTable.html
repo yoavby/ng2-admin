@@ -1,3 +1,21 @@
+    <style style="text/css">
+    .mxg-select{
+      background-color: rgba(255, 255, 255, 0.04);
+	  }
+  	.no-select{
+	  }
+	
+	/* Define the hover highlight color for the table row */
+     tr.no-select:hover {
+          background-color: rgba(0, 0, 0, 0);
+    }
+    .rotateItem{
+  -ms-transform:rotate(90deg); /* IE 9 */
+  -moz-transform:rotate(90deg); /* Firefox */
+  -webkit-transform:rotate(90deg); /* Safari and Chrome */
+  -o-transform:rotate(90deg); /* Opera */
+    }
+</style>
 <div class="horizontal-scroll">
   <table class="table table-hover">
     <thead>
@@ -16,6 +34,7 @@
             <template ngFor let-item [ngForOf]="metricsTableData" [ngForTrackBy]="itemTrackBy">
 
     <tr class="no-top-border" (click) = "setSelectItem(item)" *ngIf = "item.mxg !== true">
+       <td><div [class.rotateItem]="getRotation(item)">></div></td>
       <td><img src="{{ ( item.image | baAppPicture ) }}" width="20" height="20"></td>
       <td ngClass="nowrap">{{item.browser}}</td>
       <td class="align-right">{{item.visits}}</td>
@@ -25,23 +44,15 @@
       <td class="align-right">{{item.percent}}</td>
       <td class="table-arr"><i [ngClass]="{'icon-up': item.isPercentUp, 'icon-down': !item.isPercentUp }"></i></td>
     </tr>
-    <style style="text/css">
-  	.no-select{
-	  }
-	
-	/* Define the hover highlight color for the table row */
-     tr.no-select:hover {
-          background-color: rgba(0, 0, 0, 0);
-    }
-</style>
 
-    <tr *ngIf="item.mxg === true" class="no-select" >
-      <td colspan="8"  style="border-style: dashed;">
+
+    <tr *ngIf="item.mxg === true" class="mxg-select" >
+      <td colspan="9" >
           <sub-hover-table [metricsTableData]="item.children"></sub-hover-table>
       </td>
     </tr>
     <tr *ngIf="selectedItem === item && selectedItem != null" class="no-select" >
-      <td colspan="8">
+      <td colspan="9">
           <sub-hover-table [metricsTableData]="item.children"></sub-hover-table>
       </td>
     </tr>

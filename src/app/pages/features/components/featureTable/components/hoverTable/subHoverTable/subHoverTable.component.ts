@@ -12,10 +12,19 @@ export class SubHoverTable {
 
   @Input() metricsTableData:Array<any>;
   selectedItem:any;
-
+  isOpen:boolean;
+  getRotation(item:any) {
+  
+  if (this.selectedItem === item){
+    console.log("rotate true");
+      return true;//"rotate(90deg)"
+    }else{
+      console.log("rotate false");
+      return  false;//"rotate(180deg)"
+    }
+}
   setSelectItem(item:any){
     console.log(item.browser);
-    
     this.selectedItem=item;
   }
 }

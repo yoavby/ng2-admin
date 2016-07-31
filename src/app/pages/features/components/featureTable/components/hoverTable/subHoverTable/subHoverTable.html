@@ -1,5 +1,5 @@
 <div class="horizontal-scroll">
-  <table>
+  <table style="width:100%">
     <tbody>
             <template ngFor let-item [ngForOf]="metricsTableData" [ngForTrackBy]="itemTrackBy">
     <style style="text/css">
@@ -14,9 +14,15 @@
          tr.do-select:hover {
           background-color: rgba(0, 0, 0, 0.1);
     }
-
+    .rotateItem{
+  -ms-transform:rotate(90deg); /* IE 9 */
+  -moz-transform:rotate(90deg); /* Firefox */
+  -webkit-transform:rotate(90deg); /* Safari and Chrome */
+  -o-transform:rotate(90deg); /* Opera */
+    }
 </style>
     <tr class="no-top-border" (click) = "setSelectItem(item)" class="do-select">
+      <td><div [class.rotateItem]="getRotation(item)">></div></td>
       <td><img src="{{ ( item.image | baAppPicture ) }}" width="20" height="20"></td>
       <td ngClass="nowrap">{{item.browser}}</td>
       <td class="align-right">{{item.visits}}</td>
@@ -28,7 +34,7 @@
     </tr>
 
     <tr *ngIf="selectedItem === item && selectedItem != null" class="no-select">
-      <td colspan="8">
+      <td colspan="9">
           <sub-hover-table [metricsTableData]="item.children"></sub-hover-table>
       </td>
     </tr>
