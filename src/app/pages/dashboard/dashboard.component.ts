@@ -16,7 +16,7 @@ import {BaCard} from '../../theme/components';
   directives: [PopularApp, PieChart, TrafficChart, UsersMap, LineChart, Feed, Todo, Calendar, BaCard],
   encapsulation: ViewEncapsulation.None,
   styles: [require('./dashboard.scss')],
-  template: require('./dashboard.html')
+  template: `<router-outlet></router-outlet>`
 })
 export class Dashboard {
 
