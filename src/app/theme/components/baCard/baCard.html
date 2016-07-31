@@ -2,15 +2,17 @@
     <div *ngIf="title" class="card-header clearfix"  style="height: 60px;">
 
               <div class="row"  style="display: table-row;">
-    <div class="input-group"  style="width:400px;" >
-  <input type="text" class="form-control with-danger-addon" placeholder="Search for...">
+    <div class="input-group"  style="width:400px;"  style="display: table-row;">
+          <i class="ion-ios-search-strong" ng-click="startSearch()" style="display: table-cell;vertical-align: middle;padding-right: 10px;"></i>
+    <input class="form-control with-primary-addon" type="text" placeholder="Search for..." style="display: table-cell;">
+  <!--<input type="text" class="form-control with-danger-addon" placeholder="Search for...">
   <span class="input-group-btn" >
       <button class="btn btn-primary" type="button">Go!</button>
-  </span>
+  </span>-->
 </div>
-  <div style="display: table-cell;padding-left: 500px;">
+  <div style="display: table-cell;padding-left: 700px;">
     <div class="btn-group" dropdown style="vertical-align:baseline">
-      <button type="button" class="btn btn-primary" dropdownToggle>
+      <button type="button" class="btn btn-default" dropdownToggle>
         Android Flagship App
       </button>
       <ul class="dropdown-menu" dropdownMenu>
@@ -21,9 +23,9 @@
       </ul>
     </div>
   </div>
-    <div style="display: table-cell;">
+    <div style="display: table-cell;padding-left: 10px;">
     <div class="btn-group" dropdown  style="vertical-align:baseline">
-      <button type="button" class="btn btn-primary" dropdownToggle>
+      <button type="button" class="btn btn-default" dropdownToggle>
         4
       </button>
       <ul class="dropdown-menu" dropdownMenu>
