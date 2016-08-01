@@ -558,7 +558,7 @@ metricsTableData =[
     "creationDate": 1469599032402,
     "enabled": true,
     "lastModified": 1469599032402,
-    "description": "my feature desc 2",
+    "description": "Users who live in the Bahamas or plan to travel to the Bahamas, can benefit from receiving Bahamas Hurricane warnings during the hurricane season.",
     "name": "Bahams Lover",
     "owner": "John",
     "parent": null,

@@ -22,9 +22,9 @@
     <tr class="black-muted-bg">
       <th class="browser-icons"></th>
       <th> Name</th>
-      <th class="align-right">Description</th>
-      <th class="align-right">Stage</th>
-      <th class="align-right">Enabled/Disabled</th>
+      <th class="align-left">Description</th>
+      <th class="align-left">Stage</th>
+      <th class="align-left">Enabled/Disabled</th>
     </tr>
     </thead>
     <tbody>
@@ -33,9 +33,9 @@
     <tr class="no-top-border" (click) = "setSelectItem(item)" *ngIf = "item.mxg !== true">
        <td><div [class.rotateItem]="getRotation(item)">></div></td>
       <td ngClass="nowrap">{{item.name}}</td>
-      <td class="align-right">{{item.description}}</td>
-      <td class="align-right">{{item.stage}}</td>
-      <td class="align-right">{{item.enabled}}</td>
+      <td class="align-left">{{item.description}}</td>
+      <td class="align-left">{{item.stage}}</td>
+      <td class="align-left">{{item.enabled}}</td>
     </tr>
 
 
