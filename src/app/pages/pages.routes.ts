@@ -35,7 +35,7 @@ export const PagesRoutes:RouterConfig = [
             component: FeaturesTable,
             data: {
               menu: {
-                title: 'Features Tables',
+                title: 'Features',
                 icon: 'ion-grid'
               }
             }
@@ -59,7 +59,7 @@ export const PagesRoutes:RouterConfig = [
         data: {
           menu: {
             title: 'Settings',
-            icon: 'ion-edit',
+            icon: 'ion-gear-a',
             selected: false,
             expanded: false,
             order: 100,

@@ -16,7 +16,11 @@ import {BaCard} from '../../theme/components';
   directives: [PopularApp, PieChart, TrafficChart, UsersMap, LineChart, Feed, Todo, Calendar, BaCard],
   encapsulation: ViewEncapsulation.None,
   styles: [require('./dashboard.scss')],
-  template: `<router-outlet></router-outlet>`
+  template: `
+  <div class="content-top clearfix">
+  <h1 class="al-title">Groups</h1> 
+</div>
+  <router-outlet></router-outlet>`
 })
 export class Dashboard {
 
