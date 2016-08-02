@@ -16,9 +16,11 @@ import { DROPDOWN_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
 })
 export class FeaturesTable {
 metricsTableData:Array<any>;
+products:Array<any>;
   constructor(private _basicTablesService: FeatureTableService) {
     this.metricsTableData = _basicTablesService.metricsTableData;
+    this.products = _basicTablesService.products;
     console.log(this.metricsTableData);
-    
+    console.log(this.products);
   }
 }

@@ -537,6 +537,24 @@ export class FeatureTableService {
       status: 'warning'
     }
   ];
+  products = [
+{
+  "id":"",
+  "name":"Android Flagship App"
+},
+{
+  "id":"",
+  "name":"Android Lite App"
+},
+{
+  "id":"",
+  "name":"iOS Flagship App"
+},
+{
+  "id":"",
+  "name":"Android Flagship App"
+}
+  ];
 metricsTableData =[
   {
     "id": "4c90d247-6b0f-4250-9503-865677bb8e62",
