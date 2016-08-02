@@ -5,6 +5,7 @@ import {BaCard} from '../../../../theme/components';
 import {HoverTable} from './components/hoverTable';
 import {CardWithHTMLTitle} from '../cardWithHTMLTitle/cardWithHTMLTitle.component';
 import { DROPDOWN_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
+
 @Component({
   selector: 'features-table',
   encapsulation: ViewEncapsulation.None,
@@ -14,7 +15,10 @@ import { DROPDOWN_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
   providers: [FeatureTableService]
 })
 export class FeaturesTable {
-
-  constructor() {
+metricsTableData:Array<any>;
+  constructor(private _basicTablesService: FeatureTableService) {
+    this.metricsTableData = _basicTablesService.metricsTableData;
+    console.log(this.metricsTableData);
+    
   }
 }

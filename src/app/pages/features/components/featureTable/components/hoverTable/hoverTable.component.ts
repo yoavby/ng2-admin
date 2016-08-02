@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component,Input} from '@angular/core';
 
 import {BaAppPicturePipe} from '../../../../../../theme/pipes';
 import {FeatureTableService} from '../../featureTable.service';
@@ -8,15 +8,14 @@ import { DROPDOWN_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
   selector: 'hover-table',
   template: require('./hoverTable.html'),
   pipes: [BaAppPicturePipe],
-   directives: [SubHoverTable,DROPDOWN_DIRECTIVES]
+  directives: [SubHoverTable,DROPDOWN_DIRECTIVES]
 })
 export class HoverTable {
-
-  metricsTableData:Array<any>;
+   @Input() metricsTableData:Array<any>;
   selectedItem:any;
   isOpen:boolean;
   constructor(private _basicTablesService: FeatureTableService) {
-    this.metricsTableData = _basicTablesService.metricsTableData;
+    //this.metricsTableData = _basicTablesService.metricsTableData;
   }
 getRotation(item:any) {
   if (this.selectedItem === item && this.isOpen == true){
