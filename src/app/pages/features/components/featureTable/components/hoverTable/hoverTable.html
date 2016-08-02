@@ -9,6 +9,9 @@
      tr.no-select:hover {
           background-color: rgba(0, 0, 0, 0);
     }
+    .dropdown-toggle{
+
+    }
     .rotateItem{
   -ms-transform:rotate(90deg); /* IE 9 */
   -moz-transform:rotate(90deg); /* Firefox */
@@ -21,6 +24,7 @@
     <thead>
     <tr class="black-muted-bg">
       <th class="browser-icons"></th>
+      <th class="browser-icons"></th>
       <th> Name</th>
       <th class="align-left">Description</th>
       <th class="align-left">Stage</th>
@@ -31,6 +35,18 @@
             <template ngFor let-item [ngForOf]="metricsTableData" [ngForTrackBy]="itemTrackBy">
 
     <tr class="no-top-border" (click) = "setSelectItem(item)" *ngIf = "item.mxg !== true">
+      <td  class="align-left"> 
+    <div class="btn-group" dropdown style="vertical-align:baseline">
+      <button type="button" class="btn btn-default" dropdownToggle>
+        ...
+      </button>
+      <ul class="dropdown-menu" dropdownMenu>
+        <li class="dropdown-item"><a href="#">Edit</a></li>
+        <li class="dropdown-item"><a href="#">Delete</a></li>
+      </ul>
+    </div>
+
+      </td>
        <td><div [class.rotateItem]="getRotation(item)">></div></td>
       <td ngClass="nowrap">{{item.name}}</td>
       <td class="align-left">{{item.description}}</td>
@@ -40,12 +56,12 @@
 
 
     <tr *ngIf="item.mxg === true" class="mxg-select" >
-      <td colspan="5" >
+      <td colspan="6" >
           <sub-hover-table [metricsTableData]="item.children"></sub-hover-table>
       </td>
     </tr>
     <tr *ngIf="getRotation(item)" class="no-select" >
-      <td colspan="5">
+      <td colspan="6">
           <sub-hover-table [metricsTableData]="item.children"></sub-hover-table>
       </td>
     </tr>

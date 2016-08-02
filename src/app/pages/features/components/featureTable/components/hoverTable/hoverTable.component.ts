@@ -3,11 +3,12 @@ import {Component} from '@angular/core';
 import {BaAppPicturePipe} from '../../../../../../theme/pipes';
 import {FeatureTableService} from '../../featureTable.service';
 import {SubHoverTable} from './subHoverTable';
+import { DROPDOWN_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
 @Component({
   selector: 'hover-table',
   template: require('./hoverTable.html'),
   pipes: [BaAppPicturePipe],
-   directives: [SubHoverTable]
+   directives: [SubHoverTable,DROPDOWN_DIRECTIVES]
 })
 export class HoverTable {
 

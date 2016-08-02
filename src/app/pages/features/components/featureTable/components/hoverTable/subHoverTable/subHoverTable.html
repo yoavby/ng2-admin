@@ -22,7 +22,18 @@
     }
 </style>
  
-     <tr class="no-top-border" (click) = "setSelectItem(item)" class="do-select">     
+     <tr class="no-top-border" (click) = "setSelectItem(item)" class="do-select">
+       <td  class="align-left">
+             <div class="btn-group" dropdown style="vertical-align:baseline">
+      <button type="button" class="btn btn-default" dropdownToggle>
+        ...
+      </button>
+      <ul class="dropdown-menu" dropdownMenu>
+        <li class="dropdown-item"><a href="#">Edit</a></li>
+        <li class="dropdown-item"><a href="#">Delete</a></li>
+      </ul>
+    </div>
+       </td>     
         <td><div [class.rotateItem]="getRotation(item)">></div></td>
       <td ngClass="nowrap">{{item.name}}</td>
       <td class="align-left">{{item.description}}</td>
@@ -30,7 +41,7 @@
       <td class="align-left">{{item.enabled}}</td>
     </tr>
     <tr *ngIf="getRotation(item)" class="no-select">
-      <td colspan="5">
+      <td colspan="6">
           <sub-hover-table [metricsTableData]="item.children"></sub-hover-table>
       </td>
     </tr>

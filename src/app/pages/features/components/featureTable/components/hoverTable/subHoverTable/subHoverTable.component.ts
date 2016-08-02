@@ -1,12 +1,12 @@
 import {Component,Input} from '@angular/core';
 
 import {BaAppPicturePipe} from '../../../../../../../theme/pipes';
-
+import { DROPDOWN_DIRECTIVES } from 'ng2-bootstrap/ng2-bootstrap';
 @Component({
   selector: 'sub-hover-table',
   template: require('./subHoverTable.html'),
   pipes: [BaAppPicturePipe],
-  directives: [SubHoverTable]
+  directives: [SubHoverTable,DROPDOWN_DIRECTIVES]
 })
 export class SubHoverTable {
 
@@ -14,6 +14,10 @@ export class SubHoverTable {
   selectedItem:any;
   isOpen:boolean;
 getRotation(item:any) {
+  if(this.selectedItem == null && this.metricsTableData.length == 1){
+    this.setSelectItem(item);
+    return true;
+  }
   if (this.selectedItem === item && this.isOpen == true){
     console.log("rotate true");
       return true;//"rotate(90deg)"
