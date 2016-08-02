@@ -1,0 +1,10 @@
+<div baCardBlur class="animated fadeIn card {{cardType}} {{baCardClass || ''}}" zoom-in>
+    <div class="card-header clearfix"  style="height: 60px;">
+
+ <ng-content select="card-header"></ng-content>
+
+    </div>
+    <div class="card-body">
+        <ng-content select="card-body"></ng-content>
+    </div>
+</div>

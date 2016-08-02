@@ -682,7 +682,24 @@ metricsTableData =[
     },
     "creator": "Philip",
     "children" : [
+      {
+    "id": "4c90d247-6b0f-4250-9503-865677bb8e62",
+    "creationDate": 1469599032402,
+    "enabled": false,
+    "lastModified": 1469599032402,
+    "description": "Users who like cats video and have slow network connectivity",
+    "name": "Cat Video LQ 24 frames fix v2",
+    "owner": "John",
+    "parent": null,
+        "stage": "dev",
+    "additionalInfo": {
+      "aaa": "bbb"
+    },
+    "creator": "Philip",
+    "children" : [
       
+    ]
+  }
     ]
   }
     ]

@@ -6,15 +6,59 @@
 }
   </style>
   <div class="right">
-<button type="button" class="btn btn-default" dropdownToggle>
+<button type="button" class="btn btn-default" >
         Add Feature
       </button>
   </div>
   <div class="row">
-      <ba-card title="Hover Rows" baCardClass="with-scroll table-panel">
+      <!--<ba-card title="Hover Rows" baCardClass="with-scroll table-panel">
         <hover-table></hover-table>
-      </ba-card>
-  
+      </ba-card>-->
+        <cardWithHTMLTitle baCardClass="with-scroll table-panel">
+          <card-header>
+         
+              <div class="row"  style="display: table-row;">
+    <div class="input-group"  style="width:400px;"  style="display: table-row;">
+          <i class="ion-ios-search-strong" ng-click="startSearch()" style="display: table-cell;vertical-align: middle;padding-right: 10px;"></i>
+    <input class="form-control with-primary-addon" type="text" placeholder="Search for..." style="display: table-cell;">
+  <!--<input type="text" class="form-control with-danger-addon" placeholder="Search for...">
+  <span class="input-group-btn" >
+      <button class="btn btn-primary" type="button">Go!</button>
+  </span>-->
+</div>
+  <div style="display: table-cell;padding-left: 700px;">
+    <div class="btn-group" dropdown style="vertical-align:baseline" >
+      <button type="button" class="btn btn-default" dropdownToggle>
+        Android Flagship App
+      </button>
+      <ul class="dropdown-menu" dropdownMenu>
+        <li class="dropdown-item"><a href="#">Android Flagship App</a></li>
+        <li class="dropdown-item"><a href="#">Android Lite App</a></li>
+        <li class="dropdown-item"><a href="#">iOS Flagship App</a></li>
+        <li class="dropdown-item"><a href="#">iOS Lite App</a></li>
+      </ul>
+    </div>
+  </div>
+    <div style="display: table-cell;padding-left: 10px;">
+    <div class="btn-group" dropdown  style="vertical-align:baseline">
+      <button type="button" class="btn btn-default" dropdownToggle>
+        4
+      </button>
+      <ul class="dropdown-menu" dropdownMenu>
+        <li class="dropdown-item"><a href="#">1</a></li>
+        <li class="dropdown-item"><a href="#">2</a></li>
+        <li class="dropdown-item"><a href="#">3</a></li>
+        <li class="dropdown-divider"></li>
+        <li class="dropdown-item"><a href="#">4</a></li>
+      </ul>
+    </div>
+  </div>
+              </div>   
+          </card-header>
+          <card-body>
+        <hover-table></hover-table>
+          </card-body>
+      </cardWithHTMLTitle>
   </div>
 
 </div>
