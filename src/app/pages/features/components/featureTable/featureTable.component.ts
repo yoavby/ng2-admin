@@ -18,12 +18,22 @@ export class FeaturesTable {
 metricsTableData:Array<any>;
 products:Array<any>;
 seasons:Array<any>;
+selectedProduct:String;
+selectedSeason:String;
   constructor(private _basicTablesService: FeatureTableService) {
     this.metricsTableData = _basicTablesService.metricsTableData;
     this.products = _basicTablesService.products;
+    this.selectedProduct = this.products[0];
     this.seasons=_basicTablesService.seasons;
+    this.selectedSeason=this.seasons[0];
     console.log(this.metricsTableData);
     console.log(this.products);
     console.log(this.seasons);
+  }
+  selectProduct(item:any){
+    this.selectedProduct=item;
+  }
+  selectSeason(item:any){
+    this.selectedSeason=item;
   }
 }

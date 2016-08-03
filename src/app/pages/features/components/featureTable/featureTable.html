@@ -29,11 +29,11 @@
   <div style="display: table-cell;padding-left: 700px;">
     <div class="btn-group" dropdown style="vertical-align:baseline" >
       <button type="button" class="btn btn-default" dropdownToggle>
-        Android Flagship App
+        {{selectedProduct.name}}
       </button>
       <ul class="dropdown-menu" dropdownMenu>
         <template ngFor let-item [ngForOf]="products" [ngForTrackBy]="itemTrackBy">
-          <li class="dropdown-item"><a href="#">{{item.name}}</a></li>
+          <li class="dropdown-item"><a  (click)="selectProduct(item)">{{item.name}}</a></li>
         </template>
 
       </ul>
@@ -42,11 +42,11 @@
     <div style="display: table-cell;padding-left: 10px;">
     <div class="btn-group" dropdown  style="vertical-align:baseline">
       <button type="button" class="btn btn-default" dropdownToggle>
-        4
+        {{selectedSeason.name}}
       </button>
       <ul class="dropdown-menu" dropdownMenu>
         <template ngFor let-item [ngForOf]="seasons" [ngForTrackBy]="itemTrackBy">
-          <li class="dropdown-item"><a href="#">{{item.name}}</a></li>
+          <li class="dropdown-item"><a (click)="selectSeason(item)">{{item.name}}</a></li>
         </template>
 
       </ul>
