@@ -12,6 +12,9 @@
     .dropdown-toggle{
 
     }
+    .align-left{
+      text-align:-webkit-left;
+    }
     .rotateItem{
   -ms-transform:rotate(90deg); /* IE 9 */
   -moz-transform:rotate(90deg); /* Firefox */
@@ -48,9 +51,9 @@
 
       </td>
        <td><div [class.rotateItem]="getRotation(item)">></div></td>
-      <td ngClass="nowrap">{{item.name}}</td>
-      <td class="align-left">{{item.description}}</td>
-      <td class="align-left">{{item.stage}}</td>
+      <td ngClass="nowrap align-left" >{{item.name}}</td>
+      <td class="align-left" >{{item.description}}</td>
+      <td class="align-left" >{{item.stage}}</td>
       <td class="align-left">{{item.enabled}}</td>
     </tr>
 

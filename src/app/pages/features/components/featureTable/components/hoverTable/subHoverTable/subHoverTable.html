@@ -14,6 +14,9 @@
          tr.do-select:hover {
           background-color: rgba(0, 0, 0, 0.1);
     }
+        .align-left{
+      text-align:-webkit-left;
+    }
     .rotateItem{
   -ms-transform:rotate(90deg); /* IE 9 */
   -moz-transform:rotate(90deg); /* Firefox */
@@ -23,7 +26,7 @@
 </style>
  
      <tr class="no-top-border" (click) = "setSelectItem(item)" class="do-select">
-       <td  class="align-left">
+       <td  class="align-left" style="width:50px">
              <div class="btn-group" dropdown style="vertical-align:baseline">
       <button type="button" class="btn btn-default" dropdownToggle>
         ...
@@ -34,11 +37,11 @@
       </ul>
     </div>
        </td>     
-        <td><div [class.rotateItem]="getRotation(item)">></div></td>
-      <td ngClass="nowrap">{{item.name}}</td>
-      <td class="align-left">{{item.description}}</td>
-      <td class="align-left">{{item.stage}}</td>
-      <td class="align-left">{{item.enabled}}</td>
+        <td style="width:10px"><div [class.rotateItem]="getRotation(item)">></div></td>
+      <td ngClass="nowrap align-left" >{{item.name}}</td>
+      <td class="align-left" >{{item.description}}</td>
+      <td class="align-left" >{{item.stage}}</td>
+      <td class="align-left" >{{item.enabled}}</td>
     </tr>
     <tr *ngIf="getRotation(item)" class="no-select">
       <td colspan="6">
