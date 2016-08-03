@@ -15,6 +15,10 @@
     .align-left{
       text-align:-webkit-left;
     }
+    .tableWrap{
+      /*table-layout:fixed;*/
+    }
+
     .rotateItem{
   -ms-transform:rotate(90deg); /* IE 9 */
   -moz-transform:rotate(90deg); /* Firefox */
@@ -23,7 +27,7 @@
     }
 </style>
 <div class="horizontal-scroll">
-  <table class="table table-hover">
+  <table class="table table-hover tableWrap">
     <thead>
     <tr class="black-muted-bg">
       <th class="browser-icons"></th>
@@ -51,7 +55,7 @@
 
       </td>
        <td><div [class.rotateItem]="getRotation(item)">></div></td>
-      <td ngClass="nowrap align-left" >{{item.name}}</td>
+      <td class="align-left" >{{item.name}}</td>
       <td class="align-left" >{{item.description}}</td>
       <td class="align-left" >{{item.stage}}</td>
       <td class="align-left">{{item.enabled}}</td>
