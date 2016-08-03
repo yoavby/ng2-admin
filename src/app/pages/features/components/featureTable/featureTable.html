@@ -35,10 +35,7 @@
         <template ngFor let-item [ngForOf]="products" [ngForTrackBy]="itemTrackBy">
           <li class="dropdown-item"><a href="#">{{item.name}}</a></li>
         </template>
-        <!--<li class="dropdown-item"><a href="#">Android Flagship App</a></li>
-        <li class="dropdown-item"><a href="#">Android Lite App</a></li>
-        <li class="dropdown-item"><a href="#">iOS Flagship App</a></li>
-        <li class="dropdown-item"><a href="#">iOS Lite App</a></li>-->
+
       </ul>
     </div>
   </div>
@@ -48,11 +45,10 @@
         4
       </button>
       <ul class="dropdown-menu" dropdownMenu>
-        <li class="dropdown-item"><a href="#">1</a></li>
-        <li class="dropdown-item"><a href="#">2</a></li>
-        <li class="dropdown-item"><a href="#">3</a></li>
-        <li class="dropdown-divider"></li>
-        <li class="dropdown-item"><a href="#">4</a></li>
+        <template ngFor let-item [ngForOf]="seasons" [ngForTrackBy]="itemTrackBy">
+          <li class="dropdown-item"><a href="#">{{item.name}}</a></li>
+        </template>
+
       </ul>
     </div>
   </div>

@@ -537,6 +537,21 @@ export class FeatureTableService {
       status: 'warning'
     }
   ];
+  seasons =[
+    {
+  "id":"",
+  "name":"Season 1"
+},    {
+  "id":"",
+  "name":"Season 2"
+},    {
+  "id":"",
+  "name":"Season 3"
+},    {
+  "id":"",
+  "name":"Season 4"
+}
+  ]
   products = [
 {
   "id":"",
